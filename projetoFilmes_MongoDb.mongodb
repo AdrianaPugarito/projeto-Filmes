@@ -23,7 +23,7 @@ db.Filmes.insertMany([
     ano:"2005", premios: 10},
 
     {nome:"Bela Vingança", diretor:"Emerald Fennel", 
-    elenco:["Cary Mulligan", "Bo Burnham"],
+    elenco:["Cary Mulligan", "Bo Burnham"], // Nome da atriz errado
     ano:"2020", premios: 22},
     
     {nome:"SDA: A sociedade do Anel", diretor:"Peter Jackson", 
@@ -52,7 +52,7 @@ ano:{
 $gt:"1997",
 $lt:"2004"
 }
-})
+}) // Intervalo de anos deve ter maior/menor E igual
 
 //3 - Buscando filmes de 2001 ou que comecem com a letra D
 
@@ -82,7 +82,7 @@ $and: [
 db.Filmes.find({
 ano:{
 $ne:{$gt:"2001", $lt:"2005"}}
-})
+}) // Intervalo de anos deve ser maior/menor e igual
 
 //7 - Contando quantos filmes foram lançados em 2001
 
